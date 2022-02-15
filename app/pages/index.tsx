@@ -1,10 +1,10 @@
 import { Suspense } from "react"
-import { Image, Link, BlitzPage, useMutation, Routes } from "blitz"
+import { Link, BlitzPage, useMutation, Routes } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import { useCurrentUser } from "app/core/hooks/useCurrentUser"
 import logout from "app/auth/mutations/logout"
 import logo from "public/logo.png"
-import { Button, Container, Row, Col, Card } from "@nextui-org/react"
+import { Button, Container, Row, Col } from "@nextui-org/react"
 
 /*
  * This file is just for a pleasant getting started page for your new app.
