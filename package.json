@@ -30,10 +30,10 @@
     "react": "18.0.0-beta-149b420f6-20211119",
     "react-dom": "18.0.0-alpha-5ca4b0433-20211020",
     "react-final-form": "6.5.8",
-    "zod": "3.11.6"
+    "zod": "3.11.6",
+    "@nextui-org/react": "1.0.2-beta.4"
   },
   "devDependencies": {
-    "@nextui-org/react": "1.0.2-beta.4",
     "@types/preview-email": "2.0.1",
     "@types/react": "17.0.39",
     "eslint": "7.32.0",
