@@ -1,0 +1,46 @@
+{
+  "environments": [
+    {
+      "id": "production",
+      "name": "Production",
+      "region": "eu-central-1",
+      "source": {
+        "branch": "main"
+      },
+      "services": [
+        {
+          "id": "pollux",
+          "name": "pollux",
+          "type": "fargate",
+          "cpu": 0.25,
+          "memory": 0.5,
+          "domain": "getpollux.com",
+          "minInstances": 1,
+          "maxInstances": 1,
+          "buildCommand": "npm run build",
+          "startCommand": "npm run start",
+          "envVariables": {
+            "APP_ENV": "production",
+            "DATABASE_URL": {
+              "fromService": {
+                "id": "db",
+                "value": "dbConnectionString"
+              }
+            },
+            "SESSION_SECRET_KEY": "BETA_GEMINORUM"
+          }
+        },
+        {
+          "id": "db",
+          "name": "Database",
+          "type": "rds",
+          "engine": "postgres",
+          "engineVersion": "12",
+          "instanceSize": "db.t2.micro",
+          "storage": 20,
+          "private": false
+        }
+      ]
+    }
+  ]
+}
