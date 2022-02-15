@@ -5,7 +5,7 @@
       "name": "Production",
       "region": "eu-central-1",
       "source": {
-        "branch": "main"
+        "branch": "master"
       },
       "services": [
         {
